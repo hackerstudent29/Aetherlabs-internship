@@ -320,6 +320,146 @@
         </div>
       </section>
 
+      <!-- INTERACTIVE UI COMPONENT: APPLE-STYLE FLUID ACCORDION -->
+      <section class="section section--frost" aria-labelledby="services-faq-heading">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-header-copy">
+              <span class="kicker">Technical Governance</span>
+              <h2 id="services-faq-heading" class="section-title">
+                Architectural standards &amp; delivery questions.
+              </h2>
+              <p class="body-copy">
+                Expand any topic below to inspect how we structure intellectual property ownership,
+                model evaluation, security boundaries, and team handoff.
+              </p>
+            </div>
+          </div>
+
+          <div class="ui-accordion" data-ui-accordion>
+            <div class="ui-accordion-item">
+              <h3>
+                <button
+                  type="button"
+                  class="ui-accordion-trigger"
+                  aria-expanded="true"
+                  aria-controls="faq-panel-1"
+                  id="faq-trigger-1"
+                >
+                  <span>01. How does Aether Labs prevent hallucinations in AI Engineering projects?</span>
+                  <span class="ui-accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-panel-1"
+                class="ui-accordion-panel is-open"
+                role="region"
+                aria-labelledby="faq-trigger-1"
+              >
+                <div class="ui-accordion-panel-inner">
+                  <p class="ui-accordion-panel-content body-copy">
+                    We never deploy unconstrained prompt wrappers. Every AI pipeline pairs hybrid
+                    dense-plus-lexical retrieval with strict JSON schema outputs and a deterministic
+                    entailment check that verifies each generated claim against retrieved source
+                    passages before returning a response.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-accordion-item">
+              <h3>
+                <button
+                  type="button"
+                  class="ui-accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-2"
+                  id="faq-trigger-2"
+                >
+                  <span>02. Who owns the source code, evaluation datasets, and cloud manifests?</span>
+                  <span class="ui-accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-panel-2"
+                class="ui-accordion-panel"
+                role="region"
+                aria-labelledby="faq-trigger-2"
+              >
+                <div class="ui-accordion-panel-inner">
+                  <p class="ui-accordion-panel-content body-copy">
+                    Your organization retains 100% ownership of all source repositories, custom
+                    design systems, evaluation harnesses, and Infrastructure-as-Code modules. We
+                    build without proprietary black-box runtime dependencies so your internal
+                    engineers can maintain and extend the system independently.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-accordion-item">
+              <h3>
+                <button
+                  type="button"
+                  class="ui-accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-3"
+                  id="faq-trigger-3"
+                >
+                  <span>03. Can we swap foundation model providers or cloud regions later?</span>
+                  <span class="ui-accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-panel-3"
+                class="ui-accordion-panel"
+                role="region"
+                aria-labelledby="faq-trigger-3"
+              >
+                <div class="ui-accordion-panel-inner">
+                  <p class="ui-accordion-panel-content body-copy">
+                    Yes. We isolate external model APIs and storage backends behind clean adapter
+                    interfaces. Because every capability is backed by an automated golden evaluation
+                    suite, you can benchmark a new model or region against your exact latency and
+                    accuracy thresholds before switching traffic.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-accordion-item">
+              <h3>
+                <button
+                  type="button"
+                  class="ui-accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-4"
+                  id="faq-trigger-4"
+                >
+                  <span>04. How are Intelligent Automation workflows protected against bad writes?</span>
+                  <span class="ui-accordion-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div
+                id="faq-panel-4"
+                class="ui-accordion-panel"
+                role="region"
+                aria-labelledby="faq-trigger-4"
+              >
+                <div class="ui-accordion-panel-inner">
+                  <p class="ui-accordion-panel-content body-copy">
+                    All automated workflows enforce idempotent transaction keys, schema validation
+                    gates, and explicit confidence thresholds. Any transaction that falls below the
+                    configured policy threshold is paused and routed to a human-in-the-loop operator
+                    queue with full diff context.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ENGAGEMENT CTA -->
       <section class="section section--mist section--borderless" aria-labelledby="services-cta-heading">
         <div class="container">

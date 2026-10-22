@@ -82,8 +82,8 @@
       <section class="section" aria-labelledby="filter-section-heading">
         <div class="container">
           <div class="filter-toolbar">
-            <div>
-              <h2 id="filter-section-heading" class="kicker kicker--muted" style="margin-bottom: 8px">
+            <div class="filter-toolbar-group">
+              <h2 id="filter-section-heading" class="kicker kicker--muted mb-0">
                 Filter by Engineering Discipline
               </h2>
               <div
@@ -190,9 +190,15 @@
                     </div>
                   </div>
                   <div class="card-footer" style="margin-top: 16px">
-                    <span class="meta-line">Domain: Knowledge Synthesis</span>
+                    <button
+                      type="button"
+                      class="btn btn--secondary btn--sm"
+                      data-open-blueprint="atlas-ai"
+                    >
+                      Inspect Blueprint
+                    </button>
                     <a href="contact.html?service=AI%20Engineering" class="text-link">
-                      Request similar architecture <span class="text-link-arrow" aria-hidden="true">→</span>
+                      Request architecture <span class="text-link-arrow" aria-hidden="true">→</span>
                     </a>
                   </div>
                 </div>
@@ -247,12 +253,18 @@
                     </div>
                   </div>
                   <div class="card-footer" style="margin-top: 16px">
-                    <span class="meta-line">Domain: Composable Storefront</span>
+                    <button
+                      type="button"
+                      class="btn btn--secondary btn--sm"
+                      data-open-blueprint="pulse-commerce"
+                    >
+                      Inspect Blueprint
+                    </button>
                     <a
                       href="contact.html?service=Digital%20Product%20Development%20%26%20Web%20Development"
                       class="text-link"
                     >
-                      Request similar architecture <span class="text-link-arrow" aria-hidden="true">→</span>
+                      Request architecture <span class="text-link-arrow" aria-hidden="true">→</span>
                     </a>
                   </div>
                 </div>
@@ -307,9 +319,15 @@
                     </div>
                   </div>
                   <div class="card-footer" style="margin-top: 16px">
-                    <span class="meta-line">Domain: Workflow Orchestration</span>
+                    <button
+                      type="button"
+                      class="btn btn--secondary btn--sm"
+                      data-open-blueprint="flowdesk"
+                    >
+                      Inspect Blueprint
+                    </button>
                     <a href="contact.html?service=Intelligent%20Automation" class="text-link">
-                      Request similar architecture <span class="text-link-arrow" aria-hidden="true">→</span>
+                      Request architecture <span class="text-link-arrow" aria-hidden="true">→</span>
                     </a>
                   </div>
                 </div>
@@ -364,9 +382,15 @@
                     </div>
                   </div>
                   <div class="card-footer" style="margin-top: 16px">
-                    <span class="meta-line">Domain: Distributed Infrastructure</span>
+                    <button
+                      type="button"
+                      class="btn btn--secondary btn--sm"
+                      data-open-blueprint="nova-cloud"
+                    >
+                      Inspect Blueprint
+                    </button>
                     <a href="contact.html?service=Cloud%20Solutions" class="text-link">
-                      Request similar architecture <span class="text-link-arrow" aria-hidden="true">→</span>
+                      Request architecture <span class="text-link-arrow" aria-hidden="true">→</span>
                     </a>
                   </div>
                 </div>
@@ -375,6 +399,50 @@
           </div>
         </div>
       </section>
+
+      <!-- INTERACTIVE UI COMPONENT: PROJECT BLUEPRINT MODAL (<dialog>) -->
+      <dialog
+        id="project-blueprint-modal"
+        class="ui-modal"
+        aria-labelledby="modal-project-title"
+      >
+        <div class="ui-modal-header">
+          <div>
+            <span class="card-index" id="modal-project-discipline">AI Engineering · Architectural Blueprint</span>
+            <h2 class="card-title" id="modal-project-title" style="margin-top: 4px">
+              Atlas AI — Enterprise Knowledge Synthesis
+            </h2>
+          </div>
+          <button
+            type="button"
+            class="ui-modal-close"
+            data-close-modal
+            aria-label="Close blueprint modal"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="ui-modal-body">
+          <p class="body-copy" id="modal-project-summary"></p>
+          <div class="ui-console-card">
+            <div class="ui-console-header">
+              <span>VERIFIED BENCHMARK PROFILE</span>
+              <span>CONCEPT SPECIFICATION</span>
+            </div>
+            <div class="ui-meter-group" id="modal-project-meters"></div>
+          </div>
+          <div>
+            <span class="kicker kicker--muted">System Stack &amp; Invariants</span>
+            <div class="spec-list" id="modal-project-specs"></div>
+          </div>
+        </div>
+        <div class="ui-modal-footer">
+          <span class="meta-line">Press Esc or click outside to close</span>
+          <a href="contact.html" id="modal-project-cta" class="btn btn--primary btn--sm">
+            Request Similar Architecture
+          </a>
+        </div>
+      </dialog>
 
       <!-- CTA SECTION -->
       <section class="section section--mist section--borderless" aria-labelledby="portfolio-cta-heading">

@@ -1,12 +1,18 @@
 /**
- * AETHER LABS — VANILLA JAVASCRIPT INTERACTION & VALIDATION MODULE
+ * AETHER LABS — VANILLA JAVASCRIPT UI COMPONENT LIBRARY & FLUID MOTION ENGINE
  * Brand Tagline: Intelligence, engineered.
  *
- * Responsibilities:
- * 1. Accessible mobile navigation toggle (ARIA expanded, Escape key, outside click)
- * 2. Portfolio category filtering (All Projects, AI, Web Development, Automation, Cloud)
- * 3. Contact form client-side validation & transparent demonstration flow
- * 4. Progressive scroll-triggered reveal animations (respecting prefers-reduced-motion)
+ * Pure HTML5 / CSS3 / Vanilla JS Components & Apple-Inspired Fluid Animations:
+ * 1. Mobile navigation drawer (ARIA expanded, Escape key, outside click)
+ * 2. Sliding Segmented Pill Indicator (Spring physics transition for Tabs & Filters)
+ * 3. Portfolio category filtering (All Projects, AI, Web Development, Automation, Cloud)
+ * 4. Interactive Architecture Explorer Tabs (WAI-ARIA tablist + keyboard navigation)
+ * 5. Apple-style Smooth Grid-Row Accordions (FAQ & Technical Specs disclosures)
+ * 6. Interactive Project Blueprint Modal Sheet (<dialog> with dynamic specs)
+ * 7. Interactive 4-Stage Engineering Lifecycle Stepper (About page)
+ * 8. Specular Spotlight & Micro-Tilt Card Physics + Scroll-Triggered Stagger Reveals
+ * 9. Animated Tabular Metric Counters & Toast Notification System
+ * 10. Contact Form Client-Side Validation & Demonstration Flow
  */
 
 (function (root, factory) {
@@ -28,10 +34,130 @@
     cloud: 'Cloud'
   };
 
+  var PROJECT_BLUEPRINTS = {
+    'atlas-ai': {
+      title: 'Atlas AI — Enterprise Knowledge Synthesis',
+      discipline: 'AI Engineering',
+      serviceParam: 'AI Engineering',
+      summary:
+        'A production Retrieval-Augmented Generation (RAG) and reasoning engine designed for high-consequence technical and compliance corpora. Every generated statement is verified against source spans before leaving the inference gateway.',
+      metrics: [
+        { label: 'Citation Attribution Accuracy', value: '99.2%', fill: '99%' },
+        { label: 'P95 Hybrid Retrieval Latency', value: '180 ms', fill: '84%' },
+        { label: 'Hallucination Rejection Rate', value: '99.8%', fill: '99%' }
+      ],
+      specs: [
+        { term: 'Ingestion Pipeline', detail: 'AST-aware semantic chunking + hierarchical document graphs' },
+        { term: 'Search Index', detail: 'Reciprocal Rank Fusion combining dense HNSW vectors and BM25 lexical search' },
+        { term: 'Verification Gate', detail: 'Deterministic entailment pass with sentence-level citation anchors' },
+        { term: 'Evaluation Harness', detail: '1,240 automated golden benchmark queries run on every pull request' }
+      ]
+    },
+    'pulse-commerce': {
+      title: 'Pulse Commerce — Composable Edge Storefront',
+      discipline: 'Web Development',
+      serviceParam: 'Digital Product Development & Web Development',
+      summary:
+        'An ultra-responsive digital commerce platform architected for flagship hardware launches. Built with semantic HTML, zero-bloat client scripts, and distributed edge inventory synchronization.',
+      metrics: [
+        { label: 'Largest Contentful Paint (LCP)', value: '0.48s', fill: '96%' },
+        { label: 'Core Web Vitals Assessment', value: '100 / 100', fill: '100%' },
+        { label: 'Simulated Checkout Conversion Uplift', value: '+38.4%', fill: '88%' }
+      ],
+      specs: [
+        { term: 'Rendering Strategy', detail: 'Edge-streamed HTML with progressive vanilla JS island hydration' },
+        { term: 'State Synchronization', detail: 'Optimistic cart mutations backed by idempotent edge KV locks' },
+        { term: 'Accessibility Standard', detail: 'WCAG 2.2 Level AA verified with full keyboard checkout flow' },
+        { term: 'Visual Stability', detail: '0.00 Cumulative Layout Shift (CLS) across all 7 target viewports' }
+      ]
+    },
+    'flowdesk': {
+      title: 'Flowdesk — Autonomous Operations Pipeline',
+      discipline: 'Automation',
+      serviceParam: 'Intelligent Automation',
+      summary:
+        'A deterministic workflow orchestration engine that automates multi-step document intake, policy compliance checks, and ERP ledger synchronization while routing ambiguous edge cases to human operators.',
+      metrics: [
+        { label: 'Manual Triage Time Reduction', value: '74%', fill: '74%' },
+        { label: 'Cryptographic Audit Trail Coverage', value: '100%', fill: '100%' },
+        { label: 'Schema Extraction Precision', value: '99.1%', fill: '99%' }
+      ],
+      specs: [
+        { term: 'Orchestration Engine', detail: 'Event-driven state machine with durable execution checkpoints' },
+        { term: 'Safety Escalation', detail: 'Automatic human-in-the-loop review queue when confidence < 0.99' },
+        { term: 'Idempotency Guarantee', detail: 'Deterministic transaction keys prevent duplicate ERP ledger writes' },
+        { term: 'Observability', detail: 'Full input-to-commit lineage log exportable for compliance audits' }
+      ]
+    },
+    'nova-cloud': {
+      title: 'Nova Cloud — Multi-Region Infrastructure Mesh',
+      discipline: 'Cloud Solutions',
+      serviceParam: 'Cloud Solutions',
+      summary:
+        'A declarative multi-region cloud control plane engineered for active-active service availability, strict regional data residency, and automated FinOps compute rightsizing.',
+      metrics: [
+        { label: 'Multi-Region Target Availability', value: '99.99%', fill: '100%' },
+        { label: 'Idle Compute Cost Reduction', value: '-31%', fill: '82%' },
+        { label: 'Automated Region Failover Window', value: '< 15s', fill: '92%' }
+      ],
+      specs: [
+        { term: 'Provisioning Model', detail: 'Immutable Infrastructure-as-Code modules with zero manual drift' },
+        { term: 'Traffic Routing', detail: 'Anycast global load balancing with health-checked canary rollouts' },
+        { term: 'Telemetry & Tracing', detail: 'OpenTelemetry distributed traces correlated with container cost metrics' },
+        { term: 'Security Posture', detail: 'Zero-trust mTLS service mesh and least-privilege workload identities' }
+      ]
+    }
+  };
+
+  var LIFECYCLE_STAGES = {
+    specification: {
+      index: 'Phase 01 · Specification',
+      title: 'Formalize system invariants and measurable acceptance criteria before code.',
+      description:
+        'We begin every engagement by writing a concise architectural specification. Together with your stakeholders, we define exact input/output schemas, P95 latency budgets, security boundaries, and failure recovery rules.',
+      deliverables: [
+        { term: 'System Architecture RFC', detail: 'Written boundary diagram, data flow, and trade-off analysis' },
+        { term: 'Latency & Reliability Budget', detail: 'Explicit P50/P95 response targets and throughput ceilings' },
+        { term: 'Evaluation Dataset Seed', detail: 'Initial benchmark test cases representing real production inputs' }
+      ]
+    },
+    architecture: {
+      index: 'Phase 02 · Architecture',
+      title: 'Compose modular interfaces decoupled from vendor lock-in.',
+      description:
+        'We structure codebases with clean boundary interfaces so foundation models, vector stores, payment gateways, or cloud providers can be upgraded or swapped without rewriting core domain logic.',
+      deliverables: [
+        { term: 'Typed Domain Contracts', detail: 'Strict schema validation at every API and model boundary' },
+        { term: 'Provider-Agnostic Adapters', detail: 'Clean abstraction layer over LLM and cloud infrastructure SDKs' },
+        { term: 'Tokenized UI System', detail: 'Accessible HTML/CSS components built on a 4px spatial grid' }
+      ]
+    },
+    verification: {
+      index: 'Phase 03 · Verification',
+      title: 'Prove system behavior against deterministic and adversarial test suites.',
+      description:
+        'Before any deployment reaches production, it must pass automated unit tests, integration checks, citation grounding evaluations, and multi-viewport accessibility audits.',
+      deliverables: [
+        { term: 'Automated CI/CD Gates', detail: 'Zero-regression unit, contract, and evaluation suite runner' },
+        { term: 'Adversarial Edge-Case Suite', detail: 'Malformed input, timeout, and rate-limit resilience verification' },
+        { term: 'WCAG 2.2 AA & Web Vitals Audit', detail: 'Verified keyboard navigation, contrast, and layout stability' }
+      ]
+    },
+    operation: {
+      index: 'Phase 04 · Operation',
+      title: 'Transition to production with full telemetry and team ownership.',
+      description:
+        'We deploy using declarative Infrastructure-as-Code and hand over the complete repository, operational runbooks, and telemetry dashboards so your internal engineers can operate with confidence.',
+      deliverables: [
+        { term: 'Declarative Deployment Manifests', detail: 'Reproducible staging and production environment definitions' },
+        { term: 'Live Telemetry & Drift Alerts', detail: 'Structured logs, latency histograms, and token cost monitors' },
+        { term: 'Engineering Handoff Sessions', detail: 'Architecture walkthroughs and maintainer documentation' }
+      ]
+    }
+  };
+
   /**
    * Pure function: normalizes and validates a portfolio filter category.
-   * @param {string} category
-   * @returns {string}
    */
   function normalizeCategory(category) {
     if (!category || typeof category !== 'string') {
@@ -43,9 +169,6 @@
 
   /**
    * Pure function: filters an array of project descriptors by category.
-   * @param {Array<{id: string, title: string, category: string}>} projects
-   * @param {string} selectedCategory
-   * @returns {Array<{id: string, title: string, category: string}>}
    */
   function filterProjectsData(projects, selectedCategory) {
     if (!Array.isArray(projects)) {
@@ -61,9 +184,27 @@
   }
 
   /**
+   * Pure function: returns blueprint data for a given project ID.
+   */
+  function getProjectBlueprint(projectId) {
+    if (!projectId || typeof projectId !== 'string') {
+      return null;
+    }
+    return PROJECT_BLUEPRINTS[projectId.trim()] || null;
+  }
+
+  /**
+   * Pure function: returns engineering lifecycle stage details.
+   */
+  function getLifecycleStage(stageKey) {
+    if (!stageKey || typeof stageKey !== 'string') {
+      return LIFECYCLE_STAGES.specification;
+    }
+    return LIFECYCLE_STAGES[stageKey.trim().toLowerCase()] || LIFECYCLE_STAGES.specification;
+  }
+
+  /**
    * Pure function: validates contact form fields and returns structured result.
-   * @param {{fullName?: string, email?: string, service?: string, budget?: string, description?: string}} values
-   * @returns {{valid: boolean, errors: {fullName?: string, email?: string, service?: string, description?: string}, sanitized: object}}
    */
   function validateContactPayload(values) {
     var raw = values || {};
@@ -121,6 +262,84 @@
   }
 
   /**
+   * Helper: positions the Apple-style 2D spring sliding pill inside a .segmented-controls container
+   * across both single-row desktop and multi-row mobile grid layouts.
+   */
+  function updateSegmentedPill(container) {
+    if (!container) {
+      return;
+    }
+    var pill = container.querySelector('.segmented-pill-indicator');
+    if (!pill) {
+      pill = document.createElement('span');
+      pill.className = 'segmented-pill-indicator';
+      pill.setAttribute('aria-hidden', 'true');
+      container.appendChild(pill);
+    }
+
+    var activeBtn =
+      container.querySelector('[aria-selected="true"]') ||
+      container.querySelector('[aria-pressed="true"]') ||
+      container.querySelector('.is-active');
+
+    if (!activeBtn) {
+      container.classList.remove('has-pill');
+      return;
+    }
+
+    container.classList.add('has-pill');
+    var offsetLeft = activeBtn.offsetLeft;
+    var offsetTop = activeBtn.offsetTop;
+    var width = activeBtn.offsetWidth;
+    var height = activeBtn.offsetHeight;
+    pill.style.width = width + 'px';
+    pill.style.height = height + 'px';
+    pill.style.transform = 'translate3d(' + offsetLeft + 'px, ' + offsetTop + 'px, 0)';
+  }
+
+  function initAllSegmentedPills() {
+    var containers = Array.prototype.slice.call(
+      document.querySelectorAll('.segmented-controls')
+    );
+    containers.forEach(function (container) {
+      updateSegmentedPill(container);
+    });
+
+    window.addEventListener('resize', function () {
+      containers.forEach(function (container) {
+        updateSegmentedPill(container);
+      });
+    });
+  }
+
+  /**
+   * Toast notification helper.
+   */
+  var toastTimer = null;
+  function showToast(message) {
+    if (typeof document === 'undefined') {
+      return;
+    }
+    var toast = document.querySelector('[data-ui-toast]');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'ui-toast';
+      toast.setAttribute('data-ui-toast', '');
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('is-visible');
+    if (toastTimer) {
+      clearTimeout(toastTimer);
+    }
+    toastTimer = setTimeout(function () {
+      toast.classList.remove('is-visible');
+    }, 3600);
+  }
+
+  /**
    * Initializes mobile navigation toggle and keyboard accessibility.
    */
   function initMobileNav() {
@@ -166,6 +385,181 @@
   }
 
   /**
+   * Initializes WAI-ARIA Tabs component ([data-ui-tabs]) with sliding pill and keyboard navigation.
+   */
+  function initTabs() {
+    var tabGroups = Array.prototype.slice.call(
+      document.querySelectorAll('[data-ui-tabs]')
+    );
+
+    tabGroups.forEach(function (group) {
+      var tablist = group.querySelector('[role="tablist"]');
+      var tabs = Array.prototype.slice.call(group.querySelectorAll('[role="tab"]'));
+      var panels = Array.prototype.slice.call(group.querySelectorAll('[role="tabpanel"]'));
+
+      if (!tablist || tabs.length === 0) {
+        return;
+      }
+
+      function activateTab(targetTab, shouldFocus) {
+        var targetPanelId = targetTab.getAttribute('aria-controls');
+
+        tabs.forEach(function (tab) {
+          var isSelected = tab === targetTab;
+          tab.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+          tab.setAttribute('tabindex', isSelected ? '0' : '-1');
+          tab.classList.toggle('is-active', isSelected);
+        });
+
+        panels.forEach(function (panel) {
+          if (panel.id === targetPanelId) {
+            panel.removeAttribute('hidden');
+          } else {
+            panel.setAttribute('hidden', '');
+          }
+        });
+
+        if (tablist.classList.contains('segmented-controls')) {
+          updateSegmentedPill(tablist);
+        }
+
+        if (shouldFocus) {
+          targetTab.focus();
+        }
+      }
+
+      tabs.forEach(function (tab, index) {
+        tab.addEventListener('click', function () {
+          activateTab(tab, false);
+        });
+
+        tab.addEventListener('keydown', function (event) {
+          var nextIndex = null;
+          if (event.key === 'ArrowRight') {
+            nextIndex = (index + 1) % tabs.length;
+          } else if (event.key === 'ArrowLeft') {
+            nextIndex = (index - 1 + tabs.length) % tabs.length;
+          } else if (event.key === 'Home') {
+            nextIndex = 0;
+          } else if (event.key === 'End') {
+            nextIndex = tabs.length - 1;
+          }
+          if (nextIndex !== null) {
+            event.preventDefault();
+            activateTab(tabs[nextIndex], true);
+          }
+        });
+      });
+
+      if (tablist.classList.contains('segmented-controls')) {
+        updateSegmentedPill(tablist);
+      }
+    });
+  }
+
+  /**
+   * Initializes Apple-style fluid Accordion components ([data-ui-accordion]).
+   */
+  function initAccordions() {
+    var accordions = Array.prototype.slice.call(
+      document.querySelectorAll('[data-ui-accordion]')
+    );
+
+    accordions.forEach(function (accordion) {
+      var triggers = Array.prototype.slice.call(
+        accordion.querySelectorAll('.ui-accordion-trigger')
+      );
+
+      triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+          var panelId = trigger.getAttribute('aria-controls');
+          var panel = panelId ? document.getElementById(panelId) : null;
+
+          triggers.forEach(function (otherTrigger) {
+            if (otherTrigger !== trigger) {
+              otherTrigger.setAttribute('aria-expanded', 'false');
+              var otherId = otherTrigger.getAttribute('aria-controls');
+              var otherPanel = otherId ? document.getElementById(otherId) : null;
+              if (otherPanel) {
+                otherPanel.classList.remove('is-open');
+              }
+            }
+          });
+
+          var nextState = !isExpanded;
+          trigger.setAttribute('aria-expanded', nextState ? 'true' : 'false');
+          if (panel) {
+            panel.classList.toggle('is-open', nextState);
+          }
+        });
+      });
+    });
+  }
+
+  /**
+   * Helper: safely renders specification items without innerHTML.
+   */
+  function renderSpecItems(container, items) {
+    if (!container || !Array.isArray(items)) {
+      return;
+    }
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
+    }
+    items.forEach(function (item) {
+      var row = document.createElement('div');
+      row.className = 'spec-item';
+      var term = document.createElement('span');
+      term.className = 'spec-term';
+      term.textContent = item.term;
+      var detail = document.createElement('span');
+      detail.className = 'spec-detail';
+      detail.textContent = item.detail;
+      row.appendChild(term);
+      row.appendChild(detail);
+      container.appendChild(row);
+    });
+  }
+
+  /**
+   * Initializes interactive 4-Stage Engineering Lifecycle Stepper on about.html.
+   */
+  function initLifecycleStepper() {
+    var stepper = document.querySelector('[data-lifecycle-stepper]');
+    if (!stepper) {
+      return;
+    }
+
+    var buttons = Array.prototype.slice.call(
+      stepper.querySelectorAll('[data-stage-key]')
+    );
+    var stageIndexEl = document.getElementById('lifecycle-stage-index');
+    var stageTitleEl = document.getElementById('lifecycle-stage-title');
+    var stageDescEl = document.getElementById('lifecycle-stage-desc');
+    var stageListEl = document.getElementById('lifecycle-stage-deliverables');
+
+    function selectStage(stageKey) {
+      var data = getLifecycleStage(stageKey);
+      buttons.forEach(function (btn) {
+        var isMatch = btn.getAttribute('data-stage-key') === stageKey;
+        btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+      });
+
+      if (stageIndexEl) stageIndexEl.textContent = data.index;
+      if (stageTitleEl) stageTitleEl.textContent = data.title;
+      if (stageDescEl) stageDescEl.textContent = data.description;
+      renderSpecItems(stageListEl, data.deliverables);
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        selectStage(btn.getAttribute('data-stage-key'));
+      });
+    });
+  }
+
+  /**
    * Initializes portfolio category filtering on portfolio.html.
    */
   function initPortfolioFilters() {
@@ -193,6 +587,8 @@
         button.classList.toggle('is-active', isMatch);
         button.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
       });
+
+      updateSegmentedPill(filterContainer);
 
       projectCards.forEach(function (card) {
         var cardCategory = normalizeCategory(card.getAttribute('data-category'));
@@ -232,12 +628,125 @@
       });
     });
 
-    // Support optional URL query parameter ?category=ai|web|automation|cloud
     var params = new URLSearchParams(window.location.search);
     var initialCategory = params.get('category');
     if (initialCategory) {
       applyFilter(initialCategory);
+    } else {
+      updateSegmentedPill(filterContainer);
     }
+  }
+
+  /**
+   * Initializes interactive Project Blueprint Modal (<dialog>) on portfolio.html.
+   */
+  function initProjectModal() {
+    var modal = document.getElementById('project-blueprint-modal');
+    if (!modal) {
+      return;
+    }
+
+    var triggers = Array.prototype.slice.call(
+      document.querySelectorAll('[data-open-blueprint]')
+    );
+    var closeBtn = modal.querySelector('[data-close-modal]');
+    var disciplineEl = document.getElementById('modal-project-discipline');
+    var titleEl = document.getElementById('modal-project-title');
+    var summaryEl = document.getElementById('modal-project-summary');
+    var metersEl = document.getElementById('modal-project-meters');
+    var specsEl = document.getElementById('modal-project-specs');
+    var ctaLinkEl = document.getElementById('modal-project-cta');
+    var lastFocusedTrigger = null;
+
+    function openBlueprint(projectId, triggerEl) {
+      var data = getProjectBlueprint(projectId);
+      if (!data) {
+        return;
+      }
+      lastFocusedTrigger = triggerEl || null;
+
+      if (disciplineEl) disciplineEl.textContent = data.discipline + ' · Architectural Blueprint';
+      if (titleEl) titleEl.textContent = data.title;
+      if (summaryEl) summaryEl.textContent = data.summary;
+
+      if (metersEl) {
+        while (metersEl.firstChild) {
+          metersEl.removeChild(metersEl.firstChild);
+        }
+        data.metrics.forEach(function (m) {
+          var row = document.createElement('div');
+          row.className = 'ui-meter-row';
+          var labels = document.createElement('div');
+          labels.className = 'ui-meter-labels';
+          var lblSpan = document.createElement('span');
+          lblSpan.textContent = m.label;
+          var valSpan = document.createElement('span');
+          valSpan.textContent = m.value;
+          labels.appendChild(lblSpan);
+          labels.appendChild(valSpan);
+
+          var track = document.createElement('div');
+          track.className = 'ui-meter-track';
+          var fill = document.createElement('div');
+          fill.className = 'ui-meter-fill';
+          fill.style.width = m.fill;
+          track.appendChild(fill);
+
+          row.appendChild(labels);
+          row.appendChild(track);
+          metersEl.appendChild(row);
+        });
+      }
+
+      renderSpecItems(specsEl, data.specs);
+
+      if (ctaLinkEl) {
+        ctaLinkEl.setAttribute(
+          'href',
+          'contact.html?service=' + encodeURIComponent(data.serviceParam)
+        );
+      }
+
+      if (typeof modal.showModal === 'function') {
+        modal.showModal();
+      } else {
+        modal.setAttribute('open', '');
+      }
+    }
+
+    function closeModal() {
+      if (typeof modal.close === 'function' && modal.open) {
+        modal.close();
+      } else {
+        modal.removeAttribute('open');
+      }
+      if (lastFocusedTrigger) {
+        lastFocusedTrigger.focus();
+      }
+    }
+
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        var id = trigger.getAttribute('data-open-blueprint');
+        openBlueprint(id, trigger);
+      });
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeModal);
+    }
+
+    modal.addEventListener('click', function (event) {
+      var rect = modal.getBoundingClientRect();
+      var clickedInDialog =
+        rect.top <= event.clientY &&
+        event.clientY <= rect.top + rect.height &&
+        rect.left <= event.clientX &&
+        event.clientX <= rect.left + rect.width;
+      if (!clickedInDialog) {
+        closeModal();
+      }
+    });
   }
 
   /**
@@ -273,7 +782,6 @@
     var summaryDescription = document.getElementById('summary-description');
     var resetBtn = document.getElementById('reset-demo-form');
 
-    // Pre-select service if passed via URL query string (?service=...)
     var params = new URLSearchParams(window.location.search);
     var preselectedService = params.get('service');
     if (preselectedService && fields.service) {
@@ -379,6 +887,7 @@
           confirmationPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }
+      showToast('Inquiry validated in static demonstration mode.');
     });
 
     if (resetBtn) {
@@ -402,9 +911,42 @@
   }
 
   /**
-   * Initializes subtle scroll-triggered reveal animations when supported.
+   * Initializes Apple-inspired radial spotlight & subtle micro-tilt on cards.
    */
-  function initScrollReveal() {
+  function initSpotlightCards() {
+    var prefersReduced =
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      return;
+    }
+
+    var cards = Array.prototype.slice.call(
+      document.querySelectorAll('.surface-card, .project-card')
+    );
+
+    cards.forEach(function (card) {
+      card.setAttribute('data-spotlight-card', '');
+
+      card.addEventListener('mousemove', function (event) {
+        var rect = card.getBoundingClientRect();
+        var x = event.clientX - rect.left;
+        var y = event.clientY - rect.top;
+        card.style.setProperty('--spot-x', x + 'px');
+        card.style.setProperty('--spot-y', y + 'px');
+        card.style.setProperty('--spot-opacity', '1');
+      });
+
+      card.addEventListener('mouseleave', function () {
+        card.style.setProperty('--spot-opacity', '0');
+      });
+    });
+  }
+
+  /**
+   * Initializes scroll-triggered staggered reveals and animated metric counters.
+   */
+  function initScrollRevealAndCounters() {
     var prefersReduced =
       window.matchMedia &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -417,6 +959,19 @@
     var targets = Array.prototype.slice.call(
       document.querySelectorAll('.reveal-on-scroll')
     );
+
+    // Assign subtle stagger delays to sibling cards inside grids
+    var grids = Array.prototype.slice.call(
+      document.querySelectorAll('.bento-grid, .portfolio-grid, .grid-2, .grid-3, .grid-4')
+    );
+    grids.forEach(function (grid) {
+      var children = Array.prototype.slice.call(
+        grid.querySelectorAll('.reveal-on-scroll')
+      );
+      children.forEach(function (child, idx) {
+        child.style.setProperty('--reveal-delay', idx * 70 + 'ms');
+      });
+    });
 
     var observer = new IntersectionObserver(
       function (entries) {
@@ -448,9 +1003,15 @@
       return;
     }
     initMobileNav();
+    initAllSegmentedPills();
+    initTabs();
+    initAccordions();
+    initLifecycleStepper();
     initPortfolioFilters();
+    initProjectModal();
     initContactForm();
-    initScrollReveal();
+    initSpotlightCards();
+    initScrollRevealAndCounters();
   }
 
   if (typeof document !== 'undefined') {
@@ -464,6 +1025,8 @@
   return {
     normalizeCategory: normalizeCategory,
     filterProjectsData: filterProjectsData,
+    getProjectBlueprint: getProjectBlueprint,
+    getLifecycleStage: getLifecycleStage,
     validateContactPayload: validateContactPayload,
     init: init
   };

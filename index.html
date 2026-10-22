@@ -234,6 +234,319 @@
               </div>
             </article>
           </div>
+
+          <!-- INTERACTIVE UI COMPONENT: ARCHITECTURE EXPLORER TABS -->
+          <div class="ui-tabs" data-ui-tabs style="margin-top: 56px">
+            <div class="ui-tablist-wrap">
+              <div>
+                <span class="kicker">Interactive System Inspector</span>
+                <h3 class="card-title">Explore runtime specifications by layer</h3>
+              </div>
+              <div
+                class="segmented-controls"
+                role="tablist"
+                aria-label="System architecture layers"
+              >
+                <button
+                  type="button"
+                  class="ui-tab-btn is-active"
+                  role="tab"
+                  id="tab-ai-layer"
+                  aria-selected="true"
+                  aria-controls="panel-ai-layer"
+                  tabindex="0"
+                >
+                  AI &amp; Retrieval
+                </button>
+                <button
+                  type="button"
+                  class="ui-tab-btn"
+                  role="tab"
+                  id="tab-web-layer"
+                  aria-selected="false"
+                  aria-controls="panel-web-layer"
+                  tabindex="-1"
+                >
+                  Edge Web Runtime
+                </button>
+                <button
+                  type="button"
+                  class="ui-tab-btn"
+                  role="tab"
+                  id="tab-auto-layer"
+                  aria-selected="false"
+                  aria-controls="panel-auto-layer"
+                  tabindex="-1"
+                >
+                  Workflow Engine
+                </button>
+                <button
+                  type="button"
+                  class="ui-tab-btn"
+                  role="tab"
+                  id="tab-cloud-layer"
+                  aria-selected="false"
+                  aria-controls="panel-cloud-layer"
+                  tabindex="-1"
+                >
+                  Cloud Control Plane
+                </button>
+              </div>
+            </div>
+
+            <!-- Panel 1: AI & Retrieval -->
+            <div
+              id="panel-ai-layer"
+              class="ui-tabpanel"
+              role="tabpanel"
+              aria-labelledby="tab-ai-layer"
+            >
+              <div class="ui-tabpanel-grid">
+                <div class="card-body">
+                  <span class="card-index">Layer 01 · Deterministic AI Pipeline</span>
+                  <h4 class="section-title">Grounded inference with zero-hallucination gates.</h4>
+                  <p class="body-copy">
+                    Every model request passes through hybrid vector-lexical retrieval, strict JSON
+                    schema enforcement, and automated source citation verification before reaching
+                    the client application.
+                  </p>
+                  <div class="hero-actions" style="margin-top: 12px">
+                    <a href="services.html#ai-engineering" class="btn btn--primary btn--sm">
+                      View AI Specifications
+                    </a>
+                    <a href="portfolio.html?category=ai" class="text-link">
+                      Inspect Atlas AI Concept <span class="text-link-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="ui-console-card">
+                  <div class="ui-console-header">
+                    <span>BENCHMARK TELEMETRY · AI GATEWAY</span>
+                    <span>EVAL SUITE v4.2</span>
+                  </div>
+                  <div class="ui-meter-group">
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Citation Grounding Precision</span>
+                        <span>99.4%</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill" style="width: 99.4%"></div>
+                      </div>
+                    </div>
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Schema Contract Compliance</span>
+                        <span>100%</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>P95 Hybrid Retrieval Budget (180 ms / 250 ms ceiling)</span>
+                        <span>180 ms</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill ui-meter-fill--ink" style="width: 72%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Edge Web Runtime -->
+            <div
+              id="panel-web-layer"
+              class="ui-tabpanel"
+              role="tabpanel"
+              aria-labelledby="tab-web-layer"
+              hidden
+            >
+              <div class="ui-tabpanel-grid">
+                <div class="card-body">
+                  <span class="card-index">Layer 02 · Digital Product Interface</span>
+                  <h4 class="section-title">Sub-second web surfaces with tactile responsiveness.</h4>
+                  <p class="body-copy">
+                    We engineer semantic, accessible frontend architectures that eliminate bundle
+                    bloat, maintain zero Cumulative Layout Shift, and respond to user input within
+                    a strict 16ms frame budget.
+                  </p>
+                  <div class="hero-actions" style="margin-top: 12px">
+                    <a href="services.html#web-development" class="btn btn--primary btn--sm">
+                      View Web Specifications
+                    </a>
+                    <a href="portfolio.html?category=web" class="text-link">
+                      Inspect Pulse Commerce <span class="text-link-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="ui-console-card">
+                  <div class="ui-console-header">
+                    <span>CORE WEB VITALS · EDGE STOREFRONT</span>
+                    <span>LIGHTHOUSE 100</span>
+                  </div>
+                  <div class="ui-meter-group">
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Performance &amp; Accessibility Score</span>
+                        <span>100 / 100</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Largest Contentful Paint (0.48s vs 2.5s budget)</span>
+                        <span>0.48s</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill" style="width: 92%"></div>
+                      </div>
+                    </div>
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Visual Layout Stability (0.00 CLS)</span>
+                        <span>100%</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill ui-meter-fill--ink" style="width: 100%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Workflow Engine -->
+            <div
+              id="panel-auto-layer"
+              class="ui-tabpanel"
+              role="tabpanel"
+              aria-labelledby="tab-auto-layer"
+              hidden
+            >
+              <div class="ui-tabpanel-grid">
+                <div class="card-body">
+                  <span class="card-index">Layer 03 · Intelligent Automation</span>
+                  <h4 class="section-title">Idempotent state machines with human-in-the-loop safety.</h4>
+                  <p class="body-copy">
+                    Automated document intake and cross-system ERP synchronization backed by
+                    cryptographic audit trails and confidence-based escalation queues.
+                  </p>
+                  <div class="hero-actions" style="margin-top: 12px">
+                    <a href="services.html#intelligent-automation" class="btn btn--primary btn--sm">
+                      View Automation Specs
+                    </a>
+                    <a href="portfolio.html?category=automation" class="text-link">
+                      Inspect Flowdesk Concept <span class="text-link-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="ui-console-card">
+                  <div class="ui-console-header">
+                    <span>ORCHESTRATION PIPELINE · FLOWDESK</span>
+                    <span>IDEMPOTENT SYNC</span>
+                  </div>
+                  <div class="ui-meter-group">
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Cryptographic Audit Trail Coverage</span>
+                        <span>100%</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Manual Triage Time Reduction</span>
+                        <span>74%</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill" style="width: 74%"></div>
+                      </div>
+                    </div>
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Automated Policy Gate Precision</span>
+                        <span>99.1%</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill ui-meter-fill--ink" style="width: 99%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: Cloud Control Plane -->
+            <div
+              id="panel-cloud-layer"
+              class="ui-tabpanel"
+              role="tabpanel"
+              aria-labelledby="tab-cloud-layer"
+              hidden
+            >
+              <div class="ui-tabpanel-grid">
+                <div class="card-body">
+                  <span class="card-index">Layer 04 · Multi-Region Cloud Mesh</span>
+                  <h4 class="section-title">Declarative infrastructure with FinOps governance.</h4>
+                  <p class="body-copy">
+                    Active-active container topologies provisioned via immutable Infrastructure as
+                    Code, complete with OpenTelemetry tracing and automated compute rightsizing.
+                  </p>
+                  <div class="hero-actions" style="margin-top: 12px">
+                    <a href="services.html#cloud-solutions" class="btn btn--primary btn--sm">
+                      View Cloud Specifications
+                    </a>
+                    <a href="portfolio.html?category=cloud" class="text-link">
+                      Inspect Nova Cloud <span class="text-link-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="ui-console-card">
+                  <div class="ui-console-header">
+                    <span>CLUSTER TOPOLOGY · US / EU / APAC</span>
+                    <span>ACTIVE-ACTIVE</span>
+                  </div>
+                  <div class="ui-meter-group">
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Target Multi-Region Availability SLA</span>
+                        <span>99.99%</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill" style="width: 99.9%"></div>
+                      </div>
+                    </div>
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Declarative IaC Environment Parity</span>
+                        <span>100%</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div class="ui-meter-row">
+                      <div class="ui-meter-labels">
+                        <span>Idle Compute Overhead Reduction</span>
+                        <span>-31%</span>
+                      </div>
+                      <div class="ui-meter-track">
+                        <div class="ui-meter-fill ui-meter-fill--ink" style="width: 82%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -118,31 +118,87 @@
 
             <div class="surface-card reveal-on-scroll">
               <div class="card-body">
-                <span class="kicker">Our Approach</span>
+                <span class="kicker">Interactive Delivery Model</span>
                 <h2 class="section-title">
-                  Four structured phases from initial specification to team handoff.
+                  Inspect our four-stage engineering lifecycle.
                 </h2>
-                <div class="spec-list">
-                  <div class="spec-item">
-                    <span class="spec-term">01. Formal Specification</span>
-                    <span class="spec-detail">Define data contracts, latency budgets, and failure boundaries</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-term">02. Modular Architecture</span>
-                    <span class="spec-detail">Decouple core business logic from replaceable external providers</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-term">03. Empirical Verification</span>
-                    <span class="spec-detail">Validate behavior against deterministic test &amp; evaluation suites</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-term">04. Observable Operation</span>
-                    <span class="spec-detail">Ship with telemetry, runbooks, and full source documentation</span>
+                <div
+                  class="ui-stepper"
+                  role="tablist"
+                  aria-label="Engineering lifecycle stages"
+                  data-lifecycle-stepper
+                  style="margin-top: 8px; margin-bottom: 12px"
+                >
+                  <button
+                    type="button"
+                    class="ui-step-btn"
+                    role="tab"
+                    aria-selected="true"
+                    data-stage-key="specification"
+                  >
+                    <span class="ui-step-num">STAGE 01</span>
+                    <span class="ui-step-label">Specification</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ui-step-btn"
+                    role="tab"
+                    aria-selected="false"
+                    data-stage-key="architecture"
+                  >
+                    <span class="ui-step-num">STAGE 02</span>
+                    <span class="ui-step-label">Architecture</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ui-step-btn"
+                    role="tab"
+                    aria-selected="false"
+                    data-stage-key="verification"
+                  >
+                    <span class="ui-step-num">STAGE 03</span>
+                    <span class="ui-step-label">Verification</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="ui-step-btn"
+                    role="tab"
+                    aria-selected="false"
+                    data-stage-key="operation"
+                  >
+                    <span class="ui-step-num">STAGE 04</span>
+                    <span class="ui-step-label">Operation</span>
+                  </button>
+                </div>
+
+                <div aria-live="polite" class="card-body">
+                  <span class="card-index" id="lifecycle-stage-index">Phase 01 · Specification</span>
+                  <h3 class="card-title" id="lifecycle-stage-title">
+                    Formalize system invariants and measurable acceptance criteria before code.
+                  </h3>
+                  <p class="body-copy" id="lifecycle-stage-desc">
+                    We begin every engagement by writing a concise architectural specification.
+                    Together with your stakeholders, we define exact input/output schemas, P95
+                    latency budgets, security boundaries, and failure recovery rules.
+                  </p>
+                  <div class="spec-list" id="lifecycle-stage-deliverables">
+                    <div class="spec-item">
+                      <span class="spec-term">System Architecture RFC</span>
+                      <span class="spec-detail">Written boundary diagram, data flow, and trade-off analysis</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-term">Latency &amp; Reliability Budget</span>
+                      <span class="spec-detail">Explicit P50/P95 response targets and throughput ceilings</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-term">Evaluation Dataset Seed</span>
+                      <span class="spec-detail">Initial benchmark test cases representing real production inputs</span>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="card-footer">
-                <span class="meta-line">Transparent Engineering Workflow</span>
+                <span class="meta-line">Click any stage above to inspect deliverables</span>
                 <a href="services.html" class="text-link">
                   Explore our services <span class="text-link-arrow" aria-hidden="true">→</span>
                 </a>

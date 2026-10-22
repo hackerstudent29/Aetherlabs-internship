@@ -45,6 +45,43 @@ test('filterProjectsData filters each category accurately and restores all proje
   assert.equal(restored.length, 4);
 });
 
+test('getProjectBlueprint returns structured modal specification data for all 4 projects', () => {
+  const atlas = AetherLabs.getProjectBlueprint('atlas-ai');
+  assert.ok(atlas);
+  assert.equal(atlas.discipline, 'AI Engineering');
+  assert.equal(atlas.metrics.length, 3);
+  assert.equal(atlas.specs.length, 4);
+
+  const pulse = AetherLabs.getProjectBlueprint('pulse-commerce');
+  assert.ok(pulse);
+  assert.equal(pulse.discipline, 'Web Development');
+
+  const flowdesk = AetherLabs.getProjectBlueprint('flowdesk');
+  assert.ok(flowdesk);
+  assert.equal(flowdesk.discipline, 'Automation');
+
+  const nova = AetherLabs.getProjectBlueprint('nova-cloud');
+  assert.ok(nova);
+  assert.equal(nova.discipline, 'Cloud Solutions');
+
+  assert.equal(AetherLabs.getProjectBlueprint('nonexistent'), null);
+});
+
+test('getLifecycleStage returns engineering lifecycle deliverables for all 4 stages', () => {
+  const spec = AetherLabs.getLifecycleStage('specification');
+  assert.equal(spec.index, 'Phase 01 · Specification');
+  assert.equal(spec.deliverables.length, 3);
+
+  const arch = AetherLabs.getLifecycleStage('architecture');
+  assert.equal(arch.index, 'Phase 02 · Architecture');
+
+  const ver = AetherLabs.getLifecycleStage('verification');
+  assert.equal(ver.index, 'Phase 03 · Verification');
+
+  const op = AetherLabs.getLifecycleStage('operation');
+  assert.equal(op.index, 'Phase 04 · Operation');
+});
+
 test('validateContactPayload rejects empty or invalid submissions with accessible errors', () => {
   const emptyCheck = AetherLabs.validateContactPayload({});
   assert.equal(emptyCheck.valid, false);
