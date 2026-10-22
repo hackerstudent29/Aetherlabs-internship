@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" fill="none" role="img" aria-label="Aether Labs four-stage engineering lifecycle: Specification, Architecture, Verification, and Operation">
+  <rect width="960" height="420" rx="20" fill="#F5F5F7"/>
+  <rect x="24" y="24" width="912" height="372" rx="16" fill="#FFFFFF" stroke="#D6D6D6"/>
+  <text x="56" y="68" fill="#86868B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" letter-spacing="0.6">AETHER ENGINEERING LIFECYCLE</text>
+  <text x="56" y="100" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="600">From Formal Specification to Observable Production</text>
+
+  <line x1="56" y1="128" x2="904" y2="128" stroke="#E6E6E8"/>
+
+  <!-- Stage 1 -->
+  <g transform="translate(56, 156)">
+    <rect width="196" height="200" rx="12" fill="#FAFAFC" stroke="#E6E6E8"/>
+    <text x="20" y="34" fill="#0066CC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600">01</text>
+    <text x="20" y="64" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600">Specification</text>
+    <text x="20" y="94" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Define invariants,</text>
+    <text x="20" y="114" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">failure budgets, and</text>
+    <text x="20" y="134" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">measurable target</text>
+    <text x="20" y="154" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">outcomes before code.</text>
+  </g>
+
+  <!-- Stage 2 -->
+  <g transform="translate(276, 156)">
+    <rect width="196" height="200" rx="12" fill="#FAFAFC" stroke="#E6E6E8"/>
+    <text x="20" y="34" fill="#0066CC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600">02</text>
+    <text x="20" y="64" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600">Architecture</text>
+    <text x="20" y="94" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Compose modular</text>
+    <text x="20" y="114" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">interfaces with minimal</text>
+    <text x="20" y="134" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">external coupling and</text>
+    <text x="20" y="154" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">strict data contracts.</text>
+  </g>
+
+  <!-- Stage 3 -->
+  <g transform="translate(496, 156)">
+    <rect width="196" height="200" rx="12" fill="#FFFFFF" stroke="#0071E3" stroke-width="1.5"/>
+    <text x="20" y="34" fill="#0066CC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600">03</text>
+    <text x="20" y="64" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600">Verification</text>
+    <text x="20" y="94" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Benchmark against</text>
+    <text x="20" y="114" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">deterministic test</text>
+    <text x="20" y="134" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">suites and adversarial</text>
+    <text x="20" y="154" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">edge-case datasets.</text>
+  </g>
+
+  <!-- Stage 4 -->
+  <g transform="translate(716, 156)">
+    <rect width="188" height="200" rx="12" fill="#FAFAFC" stroke="#E6E6E8"/>
+    <text x="20" y="34" fill="#0066CC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600">04</text>
+    <text x="20" y="64" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600">Operation</text>
+    <text x="20" y="94" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Deploy with continuous</text>
+    <text x="20" y="114" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">telemetry, latency</text>
+    <text x="20" y="134" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">budgets, and clean</text>
+    <text x="20" y="154" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">team handoff.</text>
+  </g>
+</svg>

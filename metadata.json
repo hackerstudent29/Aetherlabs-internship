@@ -1,0 +1,6 @@
+{
+  "name": "Aether Labs — Intelligence, Engineered",
+  "description": "Apple-inspired website for Aether Labs, an AI engineering, digital product development, intelligent automation, and cloud architecture studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

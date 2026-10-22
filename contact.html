@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Aether Labs | Start an Engineering Inquiry</title>
+    <meta
+      name="description"
+      content="Contact Aether Labs to discuss AI Engineering, Digital Product and Web Development, Intelligent Automation, or Cloud Solutions."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aether Labs" />
+    <meta property="og:title" content="Contact — Aether Labs | Start an Engineering Inquiry" />
+    <meta
+      property="og:description"
+      content="Contact Aether Labs to discuss AI Engineering, Digital Product and Web Development, Intelligent Automation, or Cloud Solutions."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact — Aether Labs | Start an Engineering Inquiry" />
+    <meta
+      name="twitter:description"
+      content="Contact Aether Labs to discuss AI Engineering, Digital Product and Web Development, Intelligent Automation, or Cloud Solutions."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-wordmark">Aether Labs</a>
+
+        <nav class="primary-nav" id="primary-navigation" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            <li><a href="contact.html" class="nav-link" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn btn--primary btn--sm header-cta-desktop">Start a Project</a>
+          <button
+            type="button"
+            class="menu-toggle"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Open navigation menu"
+          >
+            <span class="menu-toggle-bars" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- PAGE HEADER -->
+      <section class="hero" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="hero-header" style="margin-bottom: 0">
+            <p class="hero-tagline">Technical Discovery · Intelligence, engineered.</p>
+            <h1 id="contact-heading" class="page-title">
+              Tell us about the system you are planning to build.
+            </h1>
+            <p class="lead">
+              Share your architectural goals, primary discipline, and target timeline. Every inquiry
+              is reviewed against our four core engineering practices.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT LAYOUT & FORM -->
+      <section class="section section--borderless" aria-labelledby="inquiry-form-heading">
+        <div class="container">
+          <div class="contact-layout">
+            <!-- LEFT COLUMN: EXPECTATIONS & TRANSPARENCY NOTICE -->
+            <div>
+              <span class="kicker">Direct Engagement</span>
+              <h2 id="inquiry-form-heading" class="section-title">
+                Structured technical scoping.
+              </h2>
+              <p class="body-copy" style="margin-top: 16px">
+                We begin every partnership with a focused architectural review—identifying key risks,
+                data dependencies, latency requirements, and milestone deliverables before writing
+                production code.
+              </p>
+
+              <div class="contact-info-list">
+                <div class="contact-info-item">
+                  <h3>01. Scope &amp; Architecture Review</h3>
+                  <p>
+                    We evaluate whether your objective requires custom AI pipelines, deterministic
+                    automation, web product engineering, or cloud modernization.
+                  </p>
+                </div>
+                <div class="contact-info-item">
+                  <h3>02. Written Technical Proposal</h3>
+                  <p>
+                    You receive a clear breakdown of system boundaries, evaluation criteria, and
+                    phased delivery milestones.
+                  </p>
+                </div>
+                <div class="contact-info-item">
+                  <h3>03. Direct Engineering Communication</h3>
+                  <p>
+                    Inquiries are reviewed directly by principal engineers—no high-pressure sales
+                    scripts or opaque retainers.
+                  </p>
+                </div>
+              </div>
+
+              <aside class="demo-notice" aria-label="Static demonstration notice">
+                <p>
+                  <strong>Static Demonstration Mode:</strong> Because this website runs as a
+                  pure client-side static build without a configured backend mail server, submitting
+                  this form executes full client-side validation and displays an interactive
+                  demonstration confirmation receipt locally in your browser. No external network
+                  transmission or email delivery occurs.
+                </p>
+              </aside>
+            </div>
+
+            <!-- RIGHT COLUMN: VALIDATED FORM & DEMO CONFIRMATION -->
+            <div class="form-surface">
+              <div
+                id="form-error-banner"
+                class="form-status-banner form-status-banner--error"
+                role="alert"
+                aria-live="assertive"
+                hidden
+              ></div>
+
+              <form id="aether-contact-form" class="contact-form" novalidate>
+                <div class="form-row-2">
+                  <div class="field-group">
+                    <label for="full-name" class="field-label">
+                      <span>Full name <span class="field-required" aria-hidden="true">*</span></span>
+                    </label>
+                    <input
+                      type="text"
+                      id="full-name"
+                      name="fullName"
+                      class="form-control"
+                      autocomplete="name"
+                      placeholder="Elena Vance"
+                      required
+                      aria-required="true"
+                      aria-invalid="false"
+                      aria-describedby="error-full-name"
+                    />
+                    <p id="error-full-name" class="field-error" role="alert" hidden></p>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="email-address" class="field-label">
+                      <span>Email address <span class="field-required" aria-hidden="true">*</span></span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email-address"
+                      name="email"
+                      class="form-control"
+                      autocomplete="email"
+                      placeholder="elena@organization.com"
+                      required
+                      aria-required="true"
+                      aria-invalid="false"
+                      aria-describedby="error-email-address"
+                    />
+                    <p id="error-email-address" class="field-error" role="alert" hidden></p>
+                  </div>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="field-group">
+                    <label for="requested-service" class="field-label">
+                      <span>Requested service <span class="field-required" aria-hidden="true">*</span></span>
+                    </label>
+                    <select
+                      id="requested-service"
+                      name="service"
+                      class="form-control"
+                      required
+                      aria-required="true"
+                      aria-invalid="false"
+                      aria-describedby="error-requested-service"
+                    >
+                      <option value="">Select a primary service...</option>
+                      <option value="AI Engineering">AI Engineering</option>
+                      <option value="Digital Product Development &amp; Web Development">
+                        Digital Product Development &amp; Web Development
+                      </option>
+                      <option value="Intelligent Automation">Intelligent Automation</option>
+                      <option value="Cloud Solutions">Cloud Solutions</option>
+                      <option value="Multi-Discipline Advisory">Multi-Discipline Advisory</option>
+                    </select>
+                    <p id="error-requested-service" class="field-error" role="alert" hidden></p>
+                  </div>
+
+                  <div class="field-group">
+                    <label for="project-budget" class="field-label">
+                      <span>Project budget</span>
+                      <span class="field-optional">Optional</span>
+                    </label>
+                    <select
+                      id="project-budget"
+                      name="budget"
+                      class="form-control"
+                      aria-describedby="hint-project-budget"
+                    >
+                      <option value="">Select estimated range (optional)...</option>
+                      <option value="$25,000 – $50,000">$25,000 – $50,000</option>
+                      <option value="$50,000 – $100,000">$50,000 – $100,000</option>
+                      <option value="$100,000 – $250,000">$100,000 – $250,000</option>
+                      <option value="$250,000+">$250,000+</option>
+                      <option value="Undetermined / Scoping Phase">Undetermined / Scoping Phase</option>
+                    </select>
+                    <p id="hint-project-budget" class="field-hint">
+                      Helps us align architectural recommendations to your target phase.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label for="project-description" class="field-label">
+                    <span>Project description <span class="field-required" aria-hidden="true">*</span></span>
+                  </label>
+                  <textarea
+                    id="project-description"
+                    name="description"
+                    class="form-control"
+                    rows="5"
+                    placeholder="Describe your technical objectives, current system constraints, and target delivery timeline (minimum 20 characters)..."
+                    required
+                    aria-required="true"
+                    aria-invalid="false"
+                    aria-describedby="hint-project-description error-project-description"
+                  ></textarea>
+                  <p id="hint-project-description" class="field-hint">
+                    Minimum 20 characters. Please avoid sharing sensitive credentials or proprietary keys.
+                  </p>
+                  <p id="error-project-description" class="field-error" role="alert" hidden></p>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+                  <p class="field-hint">
+                    Fields marked with <span class="field-required">*</span> are required.
+                  </p>
+                  <button type="submit" class="btn btn--primary">
+                    Submit Project Inquiry
+                  </button>
+                </div>
+              </form>
+
+              <!-- DEMONSTRATION SUBMISSION CONFIRMATION PANEL -->
+              <div
+                id="submission-confirmation"
+                class="submission-confirmation"
+                tabindex="-1"
+                role="status"
+                aria-live="polite"
+                hidden
+              >
+                <div class="form-status-banner form-status-banner--success">
+                  <strong>Demonstration Inquiry Validated (Local Preview Mode)</strong>
+                  <p style="margin-top: 4px; font-size: 0.875rem; color: var(--slate)">
+                    Your inquiry passed all client-side validation checks. Because no backend email
+                    transport is connected in this static build, the payload below has been rendered
+                    locally for verification.
+                  </p>
+                </div>
+
+                <div class="submission-summary" aria-label="Validated inquiry payload summary">
+                  <div class="spec-item">
+                    <span class="spec-term">Full Name</span>
+                    <span class="spec-detail" id="summary-name"></span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-term">Email Address</span>
+                    <span class="spec-detail" id="summary-email"></span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-term">Requested Service</span>
+                    <span class="spec-detail" id="summary-service"></span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-term">Estimated Budget</span>
+                    <span class="spec-detail" id="summary-budget"></span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-term">Project Description</span>
+                    <span class="spec-detail" id="summary-description"></span>
+                  </div>
+                </div>
+
+                <div>
+                  <button type="button" id="reset-demo-form" class="btn btn--secondary">
+                    Submit Another Demonstration Inquiry
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-brand-title">Aether Labs</span>
+            <p class="footer-tagline">Intelligence, engineered.</p>
+            <p>
+              Applied AI engineering, digital product development, intelligent automation, and
+              resilient cloud architecture crafted with precision and restraint.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="footer-col-title">Navigation</h2>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-col-title">Capabilities</h2>
+            <ul class="footer-links">
+              <li><a href="services.html#ai-engineering">AI Engineering</a></li>
+              <li><a href="services.html#web-development">Product &amp; Web Development</a></li>
+              <li><a href="services.html#intelligent-automation">Intelligent Automation</a></li>
+              <li><a href="services.html#cloud-solutions">Cloud Solutions</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-col-title">Concept Works</h2>
+            <ul class="footer-links">
+              <li><a href="portfolio.html?category=ai">Atlas AI</a></li>
+              <li><a href="portfolio.html?category=web">Pulse Commerce</a></li>
+              <li><a href="portfolio.html?category=automation">Flowdesk</a></li>
+              <li><a href="portfolio.html?category=cloud">Nova Cloud</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Aether Labs. All rights reserved.</p>
+          <p>Static HTML5 · CSS3 · Vanilla JavaScript Reference Architecture</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

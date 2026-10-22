@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" fill="none" role="img" aria-label="Aether Labs system architecture diagram showing model evaluation, deterministic runtime, and distributed cloud infrastructure">
+  <defs>
+    <linearGradient id="bgSurface" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FAFAFC"/>
+      <stop offset="55%" stop-color="#F5F5F7"/>
+      <stop offset="100%" stop-color="#EAEAEF"/>
+    </linearGradient>
+    <linearGradient id="cardGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FAFAFC"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="200" y1="338" x2="1000" y2="338" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D6D6D6"/>
+      <stop offset="50%" stop-color="#0071E3"/>
+      <stop offset="100%" stop-color="#D6D6D6"/>
+    </linearGradient>
+    <pattern id="archGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E6E6E8" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="675" rx="24" fill="url(#bgSurface)"/>
+  <rect x="24" y="24" width="1152" height="627" rx="18" fill="url(#archGrid)" opacity="0.65"/>
+  <rect x="24" y="24" width="1152" height="627" rx="18" stroke="#D6D6D6" stroke-width="1"/>
+
+  <!-- Top Frame Header -->
+  <line x1="24" y1="84" x2="1176" y2="84" stroke="#D6D6D6" stroke-width="1"/>
+  <text x="56" y="60" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="0.2">Aether Reference Architecture · Production Inference &amp; Control Plane</text>
+  <text x="1144" y="60" text-anchor="end" fill="#707070" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">99.98% Deterministic SLA</text>
+
+  <!-- Connecting Conduit Lines -->
+  <path d="M368 250 H448" stroke="url(#accentLine)" stroke-width="2"/>
+  <path d="M752 250 H832" stroke="url(#accentLine)" stroke-width="2"/>
+  <path d="M600 370 V435" stroke="#0071E3" stroke-width="2"/>
+  <path d="M224 370 V505 H448" stroke="#D6D6D6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M976 370 V505 H752" stroke="#D6D6D6" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Left Module: Context & Data Layer -->
+  <g transform="translate(80, 140)">
+    <rect width="288" height="230" rx="16" fill="url(#cardGlass)" stroke="#D6D6D6" stroke-width="1.2"/>
+    <text x="28" y="42" fill="#86868B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" letter-spacing="0.6">01 · INGESTION &amp; INDEXING</text>
+    <text x="28" y="72" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="600">Semantic Context Core</text>
+    <line x1="28" y1="94" x2="260" y2="94" stroke="#E6E6E8" stroke-width="1"/>
+    <rect x="28" y="114" width="232" height="36" rx="8" fill="#F5F5F7" stroke="#E6E6E8"/>
+    <text x="44" y="137" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="500">Hybrid Vector + Lexical Graph</text>
+    <rect x="28" y="162" width="232" height="36" rx="8" fill="#F5F5F7" stroke="#E6E6E8"/>
+    <text x="44" y="185" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="500">Schema-Enforced Contracts</text>
+  </g>
+
+  <!-- Center Module: Intelligence Engine -->
+  <g transform="translate(448, 124)">
+    <rect width="304" height="246" rx="18" fill="#FFFFFF" stroke="#0071E3" stroke-width="1.8"/>
+    <rect x="28" y="26" width="128" height="24" rx="6" fill="#F5F5F7"/>
+    <text x="40" y="42" fill="#0066CC" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">02 · CORE ENGINE</text>
+    <text x="28" y="78" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="600">Reasoning &amp; Policy Gate</text>
+    <text x="28" y="104" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Multi-model routing with automated regression guardrails.</text>
+    <line x1="28" y1="122" x2="276" y2="122" stroke="#E6E6E8" stroke-width="1"/>
+    <!-- Precision Bars -->
+    <text x="28" y="148" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="500">Verification Pass Rate</text>
+    <text x="276" y="148" text-anchor="end" fill="#1D1D1F" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600">99.4%</text>
+    <rect x="28" y="158" width="248" height="8" rx="4" fill="#E6E6E8"/>
+    <rect x="28" y="158" width="242" height="8" rx="4" fill="#0071E3"/>
+
+    <text x="28" y="194" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="500">Median P95 Response</text>
+    <text x="276" y="194" text-anchor="end" fill="#1D1D1F" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="600">142 ms</text>
+    <rect x="28" y="204" width="248" height="8" rx="4" fill="#E6E6E8"/>
+    <rect x="28" y="204" width="196" height="8" rx="4" fill="#1D1D1F"/>
+  </g>
+
+  <!-- Right Module: Execution & Cloud Delivery -->
+  <g transform="translate(832, 140)">
+    <rect width="288" height="230" rx="16" fill="url(#cardGlass)" stroke="#D6D6D6" stroke-width="1.2"/>
+    <text x="28" y="42" fill="#86868B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" letter-spacing="0.6">03 · CLIENT &amp; CLOUD EDGE</text>
+    <text x="28" y="72" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="600">Application Runtime</text>
+    <line x1="28" y1="94" x2="260" y2="94" stroke="#E6E6E8" stroke-width="1"/>
+    <rect x="28" y="114" width="232" height="36" rx="8" fill="#F5F5F7" stroke="#E6E6E8"/>
+    <text x="44" y="137" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="500">Zero-Downtime Edge Mesh</text>
+    <rect x="28" y="162" width="232" height="36" rx="8" fill="#F5F5F7" stroke="#E6E6E8"/>
+    <text x="44" y="185" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="500">Full-Trace Audit Telemetry</text>
+  </g>
+
+  <!-- Bottom Observability Bar -->
+  <g transform="translate(448, 435)">
+    <rect width="304" height="140" rx="16" fill="#1D1D1F"/>
+    <text x="28" y="38" fill="#86868B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" letter-spacing="0.6">CONTINUOUS EVALUATION SUITE</text>
+    <text x="28" y="68" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="600">Automated Safety &amp; Drift Checks</text>
+    <text x="28" y="96" fill="#D6D6D6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">eval_suite: 1,240 benchmark cases</text>
+    <text x="28" y="118" fill="#0071E3" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">status: verified build pipeline</text>
+  </g>
+</svg>

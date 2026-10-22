@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — Aether Labs | Concept Systems &amp; Architectures</title>
+    <meta
+      name="description"
+      content="Explore Aether Labs' concept portfolio: Atlas AI (AI Engineering), Pulse Commerce (Web Development), Flowdesk (Automation), and Nova Cloud (Cloud Solutions)."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aether Labs" />
+    <meta property="og:title" content="Portfolio — Aether Labs | Concept Systems &amp; Architectures" />
+    <meta
+      property="og:description"
+      content="Explore Aether Labs' concept portfolio: Atlas AI (AI Engineering), Pulse Commerce (Web Development), Flowdesk (Automation), and Nova Cloud (Cloud Solutions)."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfolio — Aether Labs | Concept Systems &amp; Architectures" />
+    <meta
+      name="twitter:description"
+      content="Explore Aether Labs' concept portfolio: Atlas AI (AI Engineering), Pulse Commerce (Web Development), Flowdesk (Automation), and Nova Cloud (Cloud Solutions)."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-wordmark">Aether Labs</a>
+
+        <nav class="primary-nav" id="primary-navigation" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="portfolio.html" class="nav-link" aria-current="page">Portfolio</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn btn--primary btn--sm header-cta-desktop">Start a Project</a>
+          <button
+            type="button"
+            class="menu-toggle"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Open navigation menu"
+          >
+            <span class="menu-toggle-bars" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- PAGE HEADER -->
+      <section class="hero" aria-labelledby="portfolio-heading">
+        <div class="container">
+          <div class="hero-header" style="margin-bottom: 0">
+            <p class="hero-tagline">Concept Portfolio · Intelligence, engineered.</p>
+            <h1 id="portfolio-heading" class="page-title">
+              Reference architectures engineered across four disciplines.
+            </h1>
+            <p class="lead">
+              Each concept project below illustrates how Aether Labs structures system boundaries,
+              user interfaces, latency budgets, and verification suites across AI, Web Development,
+              Automation, and Cloud Solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILTERABLE PORTFOLIO SECTION -->
+      <section class="section" aria-labelledby="filter-section-heading">
+        <div class="container">
+          <div class="filter-toolbar">
+            <div>
+              <h2 id="filter-section-heading" class="kicker kicker--muted" style="margin-bottom: 8px">
+                Filter by Engineering Discipline
+              </h2>
+              <div
+                class="segmented-controls"
+                role="group"
+                aria-label="Portfolio category filters"
+                data-portfolio-filters
+              >
+                <button
+                  type="button"
+                  class="filter-btn is-active"
+                  data-filter="all"
+                  aria-pressed="true"
+                >
+                  All Projects
+                </button>
+                <button
+                  type="button"
+                  class="filter-btn"
+                  data-filter="ai"
+                  aria-pressed="false"
+                >
+                  AI
+                </button>
+                <button
+                  type="button"
+                  class="filter-btn"
+                  data-filter="web"
+                  aria-pressed="false"
+                >
+                  Web Development
+                </button>
+                <button
+                  type="button"
+                  class="filter-btn"
+                  data-filter="automation"
+                  aria-pressed="false"
+                >
+                  Automation
+                </button>
+                <button
+                  type="button"
+                  class="filter-btn"
+                  data-filter="cloud"
+                  aria-pressed="false"
+                >
+                  Cloud
+                </button>
+              </div>
+            </div>
+
+            <p class="filter-status" data-filter-status aria-live="polite">
+              Showing 4 of 4 concept projects (All Projects)
+            </p>
+          </div>
+
+          <div class="portfolio-grid" data-portfolio-grid>
+            <!-- PROJECT 1: ATLAS AI -->
+            <article class="project-card" data-category="ai" id="project-atlas-ai">
+              <div class="project-media">
+                <img
+                  src="assets/images/atlas-ai.svg"
+                  alt="Atlas AI interface diagram showing indexed technical sources, similarity scores, and verified synthesis graph"
+                  width="800"
+                  height="600"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="project-content">
+                <div class="card-body">
+                  <div class="meta-line">
+                    <span>AI Engineering</span>
+                    <span class="meta-sep" aria-hidden="true">·</span>
+                    <span>Concept System 01</span>
+                  </div>
+                  <h3 class="card-title">Atlas AI — AI Engineering</h3>
+                  <p class="body-copy">
+                    An enterprise retrieval and grounded synthesis engine designed for engineering
+                    and compliance documentation. Atlas AI pairs hybrid vector-lexical indexing with
+                    a deterministic verification pass that blocks unattributed claims prior to
+                    delivery.
+                  </p>
+                  <div class="spec-list">
+                    <div class="spec-item">
+                      <span class="spec-term">Retrieval Architecture</span>
+                      <span class="spec-detail">Reciprocal Rank Fusion (Dense + BM25)</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-term">Verification Gate</span>
+                      <span class="spec-detail">Sentence-level source span matching</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="project-metrics">
+                    <div>
+                      <div class="project-metric-val">99.2%</div>
+                      <div class="project-metric-lbl">Citation Attribution Accuracy</div>
+                    </div>
+                    <div>
+                      <div class="project-metric-val">180 ms</div>
+                      <div class="project-metric-lbl">P95 Retrieval Latency</div>
+                    </div>
+                  </div>
+                  <div class="card-footer" style="margin-top: 16px">
+                    <span class="meta-line">Domain: Knowledge Synthesis</span>
+                    <a href="contact.html?service=AI%20Engineering" class="text-link">
+                      Request similar architecture <span class="text-link-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 2: PULSE COMMERCE -->
+            <article class="project-card" data-category="web" id="project-pulse-commerce">
+              <div class="project-media">
+                <img
+                  src="assets/images/pulse-commerce.svg"
+                  alt="Pulse Commerce storefront preview and Core Web Vitals telemetry card showing 0.48s LCP"
+                  width="800"
+                  height="600"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="project-content">
+                <div class="card-body">
+                  <div class="meta-line">
+                    <span>Web Development</span>
+                    <span class="meta-sep" aria-hidden="true">·</span>
+                    <span>Concept System 02</span>
+                  </div>
+                  <h3 class="card-title">Pulse Commerce — Web Development</h3>
+                  <p class="body-copy">
+                    A composable digital product storefront built for high-consideration hardware
+                    brands. Engineered with progressive enhancement, edge-cached inventory state,
+                    and accessible keyboard-first checkout flows with zero layout shift.
+                  </p>
+                  <div class="spec-list">
+                    <div class="spec-item">
+                      <span class="spec-term">Frontend Architecture</span>
+                      <span class="spec-detail">Semantic HTML5, tokenized CSS Grid, zero runtime bloat</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-term">Accessibility Target</span>
+                      <span class="spec-detail">WCAG 2.2 Level AA verified checkout flow</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="project-metrics">
+                    <div>
+                      <div class="project-metric-val">0.48s</div>
+                      <div class="project-metric-lbl">Largest Contentful Paint</div>
+                    </div>
+                    <div>
+                      <div class="project-metric-val">100 / 100</div>
+                      <div class="project-metric-lbl">Core Web Vitals Benchmark</div>
+                    </div>
+                  </div>
+                  <div class="card-footer" style="margin-top: 16px">
+                    <span class="meta-line">Domain: Composable Storefront</span>
+                    <a
+                      href="contact.html?service=Digital%20Product%20Development%20%26%20Web%20Development"
+                      class="text-link"
+                    >
+                      Request similar architecture <span class="text-link-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 3: FLOWDESK -->
+            <article class="project-card" data-category="automation" id="project-flowdesk">
+              <div class="project-media">
+                <img
+                  src="assets/images/flowdesk.svg"
+                  alt="Flowdesk automation pipeline diagram showing document intake, policy engine validation, and ERP ledger sync"
+                  width="800"
+                  height="600"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="project-content">
+                <div class="card-body">
+                  <div class="meta-line">
+                    <span>Automation</span>
+                    <span class="meta-sep" aria-hidden="true">·</span>
+                    <span>Concept System 03</span>
+                  </div>
+                  <h3 class="card-title">Flowdesk — Automation</h3>
+                  <p class="body-copy">
+                    An event-driven operational workflow platform that automates multi-step document
+                    intake, policy verification, and ERP ledger synchronization. Low-confidence
+                    items route automatically to an operator review queue with full diff context.
+                  </p>
+                  <div class="spec-list">
+                    <div class="spec-item">
+                      <span class="spec-term">Execution Guarantee</span>
+                      <span class="spec-detail">Idempotent state machine with cryptographic audit log</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-term">Safety Boundary</span>
+                      <span class="spec-detail">Human-in-the-loop escalation below 0.99 confidence</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="project-metrics">
+                    <div>
+                      <div class="project-metric-val">74%</div>
+                      <div class="project-metric-lbl">Manual Triage Reduction</div>
+                    </div>
+                    <div>
+                      <div class="project-metric-val">100%</div>
+                      <div class="project-metric-lbl">Audit Trail Traceability</div>
+                    </div>
+                  </div>
+                  <div class="card-footer" style="margin-top: 16px">
+                    <span class="meta-line">Domain: Workflow Orchestration</span>
+                    <a href="contact.html?service=Intelligent%20Automation" class="text-link">
+                      Request similar architecture <span class="text-link-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 4: NOVA CLOUD -->
+            <article class="project-card" data-category="cloud" id="project-nova-cloud">
+              <div class="project-media">
+                <img
+                  src="assets/images/nova-cloud.svg"
+                  alt="Nova Cloud multi-region infrastructure diagram across Virginia, Frankfurt, and Tokyo clusters"
+                  width="800"
+                  height="600"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="project-content">
+                <div class="card-body">
+                  <div class="meta-line">
+                    <span>Cloud Solutions</span>
+                    <span class="meta-sep" aria-hidden="true">·</span>
+                    <span>Concept System 04</span>
+                  </div>
+                  <h3 class="card-title">Nova Cloud — Cloud Solutions</h3>
+                  <p class="body-copy">
+                    A declarative multi-region cloud control plane engineered for active-active
+                    service resilience, regional data sovereignty, and automated compute rightsizing
+                    across US, European, and Asia-Pacific clusters.
+                  </p>
+                  <div class="spec-list">
+                    <div class="spec-item">
+                      <span class="spec-term">Provisioning Model</span>
+                      <span class="spec-detail">Immutable Infrastructure-as-Code modules</span>
+                    </div>
+                    <div class="spec-item">
+                      <span class="spec-term">Observability Stack</span>
+                      <span class="spec-detail">Unified OpenTelemetry traces &amp; FinOps cost anomalies</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="project-metrics">
+                    <div>
+                      <div class="project-metric-val">99.99%</div>
+                      <div class="project-metric-lbl">Target Cluster Availability</div>
+                    </div>
+                    <div>
+                      <div class="project-metric-val">-31%</div>
+                      <div class="project-metric-lbl">Idle Compute Overhead</div>
+                    </div>
+                  </div>
+                  <div class="card-footer" style="margin-top: 16px">
+                    <span class="meta-line">Domain: Distributed Infrastructure</span>
+                    <a href="contact.html?service=Cloud%20Solutions" class="text-link">
+                      Request similar architecture <span class="text-link-arrow" aria-hidden="true">→</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="section section--mist section--borderless" aria-labelledby="portfolio-cta-heading">
+        <div class="container">
+          <div class="cta-panel reveal-on-scroll" style="background-color: var(--gallery-white)">
+            <div class="cta-panel-copy">
+              <span class="kicker">From Concept to Production</span>
+              <h2 id="portfolio-cta-heading" class="section-title">
+                Have a specific technical challenge in mind?
+              </h2>
+              <p class="body-copy">
+                Share your system requirements with our engineering team to discuss architecture,
+                milestones, and delivery scope.
+              </p>
+            </div>
+            <div class="hero-actions" style="margin-top: 0">
+              <a href="contact.html" class="btn btn--primary">Start a Project</a>
+              <a href="services.html" class="btn btn--secondary">Review Service Specs</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="footer-brand-title">Aether Labs</span>
+            <p class="footer-tagline">Intelligence, engineered.</p>
+            <p>
+              Applied AI engineering, digital product development, intelligent automation, and
+              resilient cloud architecture crafted with precision and restraint.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="footer-col-title">Navigation</h2>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-col-title">Capabilities</h2>
+            <ul class="footer-links">
+              <li><a href="services.html#ai-engineering">AI Engineering</a></li>
+              <li><a href="services.html#web-development">Product &amp; Web Development</a></li>
+              <li><a href="services.html#intelligent-automation">Intelligent Automation</a></li>
+              <li><a href="services.html#cloud-solutions">Cloud Solutions</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="footer-col-title">Concept Works</h2>
+            <ul class="footer-links">
+              <li><a href="portfolio.html?category=ai">Atlas AI</a></li>
+              <li><a href="portfolio.html?category=web">Pulse Commerce</a></li>
+              <li><a href="portfolio.html?category=automation">Flowdesk</a></li>
+              <li><a href="portfolio.html?category=cloud">Nova Cloud</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Aether Labs. All rights reserved.</p>
+          <p>Static HTML5 · CSS3 · Vanilla JavaScript Reference Architecture</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

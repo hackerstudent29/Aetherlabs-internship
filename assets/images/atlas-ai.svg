@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none" role="img" aria-label="Atlas AI concept interface showing enterprise knowledge retrieval and citation verification">
+  <rect width="800" height="600" rx="20" fill="#F5F5F7"/>
+  <rect x="32" y="32" width="736" height="536" rx="16" fill="#FFFFFF" stroke="#D6D6D6" stroke-width="1.2"/>
+  <line x1="32" y1="88" x2="768" y2="88" stroke="#E6E6E8" stroke-width="1"/>
+  <text x="64" y="66" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600">Atlas AI · Enterprise Retrieval &amp; Grounded Synthesis</text>
+  <text x="736" y="66" text-anchor="end" fill="#0066CC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">AI Engineering</text>
+
+  <!-- Left Column: Vector Index & Corpus -->
+  <rect x="64" y="120" width="240" height="416" rx="12" fill="#FAFAFC" stroke="#E6E6E8"/>
+  <text x="88" y="154" fill="#86868B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">INDEXED SOURCES</text>
+  <rect x="88" y="174" width="192" height="56" rx="8" fill="#FFFFFF" stroke="#D6D6D6"/>
+  <text x="104" y="198" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Engineering Specs v4.2</text>
+  <text x="104" y="216" fill="#707070" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">Similarity: 0.984</text>
+
+  <rect x="88" y="244" width="192" height="56" rx="8" fill="#FFFFFF" stroke="#D6D6D6"/>
+  <text x="104" y="268" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Compliance Audit Log</text>
+  <text x="104" y="286" fill="#707070" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">Similarity: 0.961</text>
+
+  <rect x="88" y="314" width="192" height="56" rx="8" fill="#FFFFFF" stroke="#D6D6D6"/>
+  <text x="104" y="338" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">API Contract Registry</text>
+  <text x="104" y="356" fill="#707070" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11">Similarity: 0.947</text>
+
+  <text x="88" y="412" fill="#86868B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">GROUNDING METRICS</text>
+  <text x="88" y="442" fill="#1D1D1F" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="600">99.2%</text>
+  <text x="88" y="464" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">Citation Attribution Accuracy</text>
+  <text x="88" y="502" fill="#1D1D1F" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="600">180 ms</text>
+  <text x="88" y="520" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">P95 Retrieval Latency</text>
+
+  <!-- Right Column: Synthesis Output -->
+  <rect x="332" y="120" width="404" height="416" rx="12" fill="#FAFAFC" stroke="#E6E6E8"/>
+  <text x="360" y="154" fill="#86868B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">VERIFIED SYNTHESIS GRAPH</text>
+  <rect x="360" y="174" width="348" height="132" rx="10" fill="#FFFFFF" stroke="#0071E3" stroke-width="1.5"/>
+  <text x="380" y="204" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600">Deterministic Claim Verification</text>
+  <text x="380" y="230" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Every synthesized statement is cross-checked against</text>
+  <text x="380" y="250" fill="#707070" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">primary technical documentation before delivery.</text>
+  <line x1="380" y1="270" x2="688" y2="270" stroke="#E6E6E8"/>
+  <text x="380" y="290" fill="#0066CC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">3/3 Source Citations Verified · Zero Hallucination Gate</text>
+
+  <!-- Latency & Throughput Chart -->
+  <text x="360" y="346" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Token Throughput &amp; Semantic Precision</text>
+  <g transform="translate(360, 368)">
+    <rect x="0" y="76" width="42" height="64" rx="4" fill="#E6E6E8"/>
+    <rect x="60" y="56" width="42" height="84" rx="4" fill="#D6D6D6"/>
+    <rect x="120" y="42" width="42" height="98" rx="4" fill="#86868B"/>
+    <rect x="180" y="24" width="42" height="116" rx="4" fill="#1D1D1F"/>
+    <rect x="240" y="8" width="42" height="132" rx="4" fill="#0071E3"/>
+    <rect x="300" y="0" width="48" height="140" rx="4" fill="#0066CC"/>
+  </g>
+</svg>
