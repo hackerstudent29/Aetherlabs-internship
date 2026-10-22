@@ -1,18 +1,16 @@
 /**
- * AETHER LABS — VANILLA JAVASCRIPT UI COMPONENT LIBRARY & FLUID MOTION ENGINE
- * Brand Tagline: Intelligence, engineered.
+ * Aether Labs — Core UI & Interaction Scripts
  *
- * Pure HTML5 / CSS3 / Vanilla JS Components & Apple-Inspired Fluid Animations:
- * 1. Mobile navigation drawer (ARIA expanded, Escape key, outside click)
- * 2. Sliding Segmented Pill Indicator (Spring physics transition for Tabs & Filters)
- * 3. Portfolio category filtering (All Projects, AI, Web Development, Automation, Cloud)
- * 4. Interactive Architecture Explorer Tabs (WAI-ARIA tablist + keyboard navigation)
- * 5. Apple-style Smooth Grid-Row Accordions (FAQ & Technical Specs disclosures)
- * 6. Interactive Project Blueprint Modal Sheet (<dialog> with dynamic specs)
- * 7. Interactive 4-Stage Engineering Lifecycle Stepper (About page)
- * 8. Specular Spotlight & Micro-Tilt Card Physics + Scroll-Triggered Stagger Reveals
- * 9. Animated Tabular Metric Counters & Toast Notification System
- * 10. Contact Form Client-Side Validation & Demonstration Flow
+ * Modules:
+ * - Mobile navigation drawer
+ * - Segmented control pill indicator
+ * - Portfolio category filtering & URL state
+ * - Architecture explorer tabs
+ * - Accordion disclosures
+ * - Project specification modal (<dialog>)
+ * - Engineering lifecycle stepper
+ * - Card spotlight & scroll reveal observers
+ * - Contact form validation
  */
 
 (function (root, factory) {
@@ -262,7 +260,7 @@
   }
 
   /**
-   * Helper: positions the Apple-style 2D spring sliding pill inside a .segmented-controls container
+   * Positions the sliding pill inside a .segmented-controls container
    * across both single-row desktop and multi-row mobile grid layouts.
    */
   function updateSegmentedPill(container) {
@@ -458,7 +456,7 @@
   }
 
   /**
-   * Initializes Apple-style fluid Accordion components ([data-ui-accordion]).
+   * Initializes accordion disclosure components ([data-ui-accordion]).
    */
   function initAccordions() {
     var accordions = Array.prototype.slice.call(
@@ -911,7 +909,7 @@
   }
 
   /**
-   * Initializes Apple-inspired radial spotlight & subtle micro-tilt on cards.
+   * Initializes radial spotlight & subtle pointer tracking on surface cards.
    */
   function initSpotlightCards() {
     var prefersReduced =

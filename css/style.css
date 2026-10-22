@@ -1,7 +1,6 @@
 /* ==========================================================================
    AETHER LABS — DESIGN SYSTEM & SHARED STYLESHEET
-   Brand Tagline: Intelligence, engineered.
-   Architecture: Pure CSS3 · 4px Spacing Grid · Apple-Inspired Restraint
+   Tagline: Intelligence, engineered.
    ========================================================================== */
 
 :root {
@@ -1265,10 +1264,10 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   APPLE-INSPIRED FLUID MOTION & UI LIBRARY COMPONENTS (HTML/CSS/JS)
+   INTERACTIVE UI COMPONENTS & MOTION
    ========================================================================== */
 
-/* 1. Specular Spotlight & Spring Surface Cards */
+/* 1. Radial Spotlight & Surface Cards */
 [data-spotlight-card] {
   position: relative;
   overflow: hidden;
@@ -1494,7 +1493,7 @@ textarea.form-control {
   }
 }
 
-/* 5. Apple-Style Fluid Accordion Component */
+/* 5. Accordion Component */
 .ui-accordion {
   display: flex;
   flex-direction: column;

@@ -1,12 +1,12 @@
 # Aether Labs — Official Website
 
-**Brand Tagline:** *Intelligence, engineered.*
+**Tagline:** *Intelligence, engineered.*
 
-A complete, responsive, Apple-inspired static website for **Aether Labs**, an AI engineering and software development studio specializing in:
+Static marketing and technical specification website for **Aether Labs**, an AI engineering and software development studio focused on:
 1. **AI Engineering**
-2. **Digital Product Development and Web Development**
+2. **Digital Product & Web Development**
 3. **Intelligent Automation**
-4. **Cloud Solutions**
+4. **Cloud Solutions & DevOps**
 
 ---
 
@@ -14,18 +14,18 @@ A complete, responsive, Apple-inspired static website for **Aether Labs**, an AI
 
 ```text
 /
-├── index.html                  # Home page (Hero, Services overview, Selected works, Principles)
-├── about.html                  # About Us (Mission, 4-stage approach, Engineering philosophy, Values)
-├── services.html               # Services (Detailed specs & architecture diagrams for all 4 disciplines)
-├── portfolio.html              # Portfolio (4 concept systems + interactive vanilla JS category filtering)
-├── contact.html                # Contact (Accessible form, client-side validation & demonstration receipt)
+├── index.html                  # Home (Hero, Services overview, Architecture explorer, Selected works)
+├── about.html                  # About Us (Mission, 4-stage delivery model, Engineering philosophy)
+├── services.html               # Services (Technical specs & architecture diagrams for all 4 practices)
+├── portfolio.html              # Portfolio (Concept architectures + category filtering & spec modal)
+├── contact.html                # Contact (Project inquiry form, validation & confirmation summary)
 ├── css/
-│   └── style.css               # Shared Apple-inspired design system, tokens, and responsive layouts
+│   └── style.css               # Shared design system, layout tokens, and responsive breakpoints
 ├── js/
-│   └── script.js               # Shared vanilla JS (mobile navigation, portfolio filters, form validation)
+│   └── script.js               # Interactive UI controllers (navigation, filters, tabs, modal, form)
 ├── assets/
 │   ├── icons/
-│   │   └── favicon.svg         # Brand geometric SVG favicon
+│   │   └── favicon.svg         # Brand geometric SVG mark
 │   └── images/
 │       ├── hero-architecture.svg
 │       ├── about-blueprint.svg
@@ -33,7 +33,7 @@ A complete, responsive, Apple-inspired static website for **Aether Labs**, an AI
 │       ├── pulse-commerce.svg
 │       ├── flowdesk.svg
 │       └── nova-cloud.svg
-└── README.md                   # Project documentation
+└── README.md                   # Documentation
 ```
 
 ---
